@@ -12,8 +12,9 @@ Auto-Versus is a comprehensive web application that provides detailed informatio
 
 ## Technologies Used
 
-- **Frontend**: React.js, CSS
+- **Frontend**: React.js, Tailwind CSS, React Router
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
+
 
 
