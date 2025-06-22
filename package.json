@@ -1,0 +1,12 @@
+{
+  "name": "auto-versus",
+  "version": "1.0.0",
+  "description": "Auto-Versus is a comprehensive web application that provides detailed information about various car brands, models, specifications, and the latest automotive news.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
