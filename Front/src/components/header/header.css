@@ -1,17 +1,21 @@
+/* header.css */
 .site-header {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  height: 70px;
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #fdfcfc;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 .header-container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,11 +24,12 @@
 .logo-container {
   display: flex;
   align-items: center;
+  margin-top: 15px;
 }
 
 .logo-container i {
   color: #3b82f6;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-right: 0.5rem;
 }
 
@@ -50,20 +55,30 @@
 
 .search-box {
   position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-left: 20px;
 }
 
 .search-box input {
-  padding-left: 2.5rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-radius: 9999px;
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border-radius: 2rem;
   border: 1px solid #d1d5db;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgb(255, 255, 255);
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 .search-box i {
   position: absolute;
-  left: 0.75rem;
+  left: 1rem;
   top: 50%;
   transform: translateY(-50%);
   color: #9ca3af;

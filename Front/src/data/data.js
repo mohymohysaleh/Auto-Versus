@@ -30,6 +30,39 @@ export const featuredCars = [
       range: '267 miles'
     }
   },
+    {
+    name: 'Tesla Model 3',
+    type: 'Electric',
+    price: '$40,240',
+    image: 'https://cdn.motor1.com/images/mgl/7MAxK/s1/2021-tesla-model-3.jpg',
+    specs: {
+      engine: 'Electric',
+      power: '283 hp',
+      range: '267 miles'
+    }
+  },
+    {
+    name: 'Tesla Model 3',
+    type: 'Electric',
+    price: '$40,240',
+    image: 'https://cdn.motor1.com/images/mgl/7MAxK/s1/2021-tesla-model-3.jpg',
+    specs: {
+      engine: 'Electric',
+      power: '283 hp',
+      range: '267 miles'
+    }
+  },
+    {
+    name: 'Tesla Model 3',
+    type: 'Electric',
+    price: '$40,240',
+    image: 'https://cdn.motor1.com/images/mgl/7MAxK/s1/2021-tesla-model-3.jpg',
+    specs: {
+      engine: 'Electric',
+      power: '283 hp',
+      range: '267 miles'
+    }
+  },
   {
     name: 'Ford Mustang Mach-E',
     type: 'Electric SUV',

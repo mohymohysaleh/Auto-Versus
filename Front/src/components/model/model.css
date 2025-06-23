@@ -1,9 +1,12 @@
+/* models.css */
 .featured-models {
+  width: 100%;
   padding: 4rem 0;
   background-color: #f9fafb;
 }
 
 .featured-models .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -46,8 +49,9 @@
 
 .models-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 2.5rem;
+  width: 100%;
 }
 
 .car-card {
@@ -136,6 +140,8 @@
   border-radius: 0.5rem;
   font-weight: 500;
   transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .view-details-button:hover {

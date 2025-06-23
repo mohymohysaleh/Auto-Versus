@@ -1,12 +1,17 @@
+/* brands.css */
 .featured-brands {
+  width: 100%;
   padding: 4rem 0;
   background-color: #fff;
+
 }
 
 .featured-brands .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  position: relative;
 }
 
 .featured-brands h2 {
@@ -21,12 +26,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  width: 100%;
 }
 
 .brand-logo {
   background: white;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(187, 27, 27, 0.911);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -52,31 +58,6 @@
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
-}
-
-.view-all {
-  text-align: center;
-  margin-top: 2.5rem;
-}
-
-.view-all button {
-  color: #3b82f6;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.view-all button:hover {
-  color: #2563eb;
-}
-
-.view-all button i {
-  margin-left: 0.5rem;
 }
 
 @media (min-width: 640px) {
