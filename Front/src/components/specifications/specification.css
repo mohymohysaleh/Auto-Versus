@@ -1,0 +1,89 @@
+.car-specifications {
+  padding: 4rem 0;
+  background-color: #f9fafb;
+}
+
+.car-specifications .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.car-specifications h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.specs-container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.car-header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.car-header img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.car-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.car-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.car-tags span {
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.specs-table-container {
+  overflow-x: auto;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.specs-table td {
+  padding: 1rem 1.5rem;
+}
+
+.specs-table td:first-child {
+  font-weight: 500;
+  color: #374151;
+}
+
+.specs-table td:last-child {
+  color: #111827;
+}
+
+.specs-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
