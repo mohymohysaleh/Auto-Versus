@@ -14,7 +14,7 @@ const Header = () => {
       <div className="header-container">
         <div className="logo-container">
           <i className="fas fa-car"></i>
-          <h1>Auto<span>Vista</span></h1>
+          <h1>Auto<span>Versus</span></h1>
         </div>
         <nav className="main-nav">
           <Link to="/">Home</Link>
