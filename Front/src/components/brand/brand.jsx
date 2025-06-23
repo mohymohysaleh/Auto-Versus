@@ -6,18 +6,26 @@ const FeaturedBrands = () => {
   return (
     <section className="featured-brands">
       <div className="container">
-        <h2>Popular Car Brands</h2>
+        <div className="section-header">
+          <h2 className="section-title">Popular Car Brands</h2>
+          <div className="section-divider"></div>
+        </div>
         <div className="brands-grid">
           {brands.map((brand, index) => (
-            <div key={index} className="brand-logo">
-              <img src={brand.logo} alt={brand.name} />
-              <span>{brand.name}</span>
+            <div key={index} className="brand-card">
+              <div className="brand-logo-container">
+                <img src={brand.logo} alt={brand.name} className="brand-logo" />
+                <div className="brand-overlay">
+                  <span className="brand-name">{brand.name}</span>
+                  <button className="brand-explore-btn">Explore</button>
+                </div>
+              </div>
             </div>
           ))}
         </div>
         <div className="view-all">
-          <button>
-            View All Brands <i className="fas fa-chevron-right"></i>
+          <button className="view-all-btn">
+            View All Brands <i className="fas fa-arrow-right"></i>
           </button>
         </div>
       </div>
