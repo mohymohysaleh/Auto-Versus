@@ -1,46 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/AutoVersus-preview.png'; // Import the image directly
 import './header.css';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <header className="site-header">
+    <header className={`auto-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <div className="logo-container">
-          <i className="fas fa-car"></i>
-          <h1>Auto<span>Versus</span></h1>
+        <div className="header-logo">
+          <Link to="/">
+            <i className="fas fa-car"></i>
+            <img src={logo} alt="AutoVersus" className="app-logo" />
+          </Link>
         </div>
-        <nav className="main-nav">
-          <Link to="/">Home</Link>
-          <Link to="/brands">Brands</Link>
-          <Link to="/models">Models</Link>
-          <Link to="/news">News</Link>
-          <Link to="/reviews">Reviews</Link>
-          <Link to="/compare">Compare</Link>
+
+        <nav className={`header-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+          <div className="nav-links">
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/brands" className="nav-link">Brands</Link>
+            <Link to="/models" className="nav-link">Models</Link>
+            <Link to="/news" className="nav-link">News</Link>
+            <Link to="/reviews" className="nav-link">Reviews</Link>
+            <Link to="/compare" className="nav-link highlight">Compare</Link>
+          </div>
         </nav>
-        <div className="search-container">
+
+        <div className="header-actions">
           <div className="search-box">
             <input type="text" placeholder="Search cars..." />
-            <i className="fas fa-search"></i>
+            <button className="search-button">
+              <i className="fas fa-search"></i>
+            </button>
           </div>
-          <button className="mobile-menu-button" onClick={toggleMobileMenu}>
-            <i className="fas fa-bars"></i>
+          <button
+            className={`mobile-menu-button ${isMobileMenuOpen ? 'open' : ''}`}
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
-      </div>
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        <Link to="/">Home</Link>
-        <Link to="/brands">Brands</Link>
-        <Link to="/models">Models</Link>
-        <Link to="/news">News</Link>
-        <Link to="/reviews">Reviews</Link>
-        <Link to="/compare">Compare</Link>
       </div>
     </header>
   );

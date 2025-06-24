@@ -5,6 +5,15 @@
   overflow: hidden;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  /* ADDED: Ensure container doesn't exceed viewport */
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .section-header {
   text-align: center;
   margin-bottom: 3rem;
